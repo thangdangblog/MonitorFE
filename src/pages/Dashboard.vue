@@ -1,9 +1,13 @@
 <script setup>
 import { ref } from 'vue'
+import { Fireworks } from '@fireworks-js/vue'
 
 defineProps({
     msg: String,
 })
+
+const showFireWork = false;
+
 
 const count = ref(0)
 </script>
@@ -14,25 +18,27 @@ const count = ref(0)
             <div class="rate-user-detail top-2">
                 <div class="name">Nguyễn Văn Kiên</div>
                 <div class="avatar">
-                    <img src="https://amismisa.misacdn.net/APIS/PlatformAPI/api/Avatar/56c33c47-78ec-4b3a-92ba-9fdb7830a6d4/misa.jpg?&avatarID=f6bfb0d5-5817-414d-978f-8bb242a0be8d&isScale=true&width=192&height=192" alt="">
+                    <img src="" alt="">
                 </div>
                 <div class="point">156</div>
             </div>
             <div class="rate-user-detail top-1">
                 <div class="name">Nguyễn Văn Kiên</div>
                 <div class="avatar">
-                    <img src="https://amismisa.misacdn.net/APIS/PlatformAPI/api/Avatar/56c33c47-78ec-4b3a-92ba-9fdb7830a6d4/misa.jpg?&avatarID=f6bfb0d5-5817-414d-978f-8bb242a0be8d&isScale=true&width=192&height=192" alt="">
+                    <img src="" alt="">
                 </div>
                 <div class="point">156</div>
             </div>
             <div class="rate-user-detail top-3">
                 <div class="name">Nguyễn Văn Kiên</div>
                 <div class="avatar">
-                    <img src="https://amismisa.misacdn.net/APIS/PlatformAPI/api/Avatar/56c33c47-78ec-4b3a-92ba-9fdb7830a6d4/misa.jpg?&avatarID=f6bfb0d5-5817-414d-978f-8bb242a0be8d&isScale=true&width=192&height=192" alt="">
+                    <img src="" alt="">
                 </div>
                 <div class="point">156</div>
             </div>
+            <Fireworks v-if="showFireWork" />
         </div>
+       
     </div>
 </template>
 
@@ -49,6 +55,16 @@ const count = ref(0)
     height: 100px;
     border-radius: 50%;
     overflow: hidden;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.point {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
 }
 
 .avatar img {
@@ -118,5 +134,11 @@ const count = ref(0)
     width: 100%;
     text-align: center;
     color: white;
+    font-weight: bold;
 }
+
+
+
+
+
 </style>
